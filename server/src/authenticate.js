@@ -6,7 +6,7 @@ var JwtStrategy = require('passport-jwt').Strategy;
 var  ExtractJwt=require('passport-jwt').ExtractJwt;
 var jwt=require('jsonwebtoken');
 
-var constants=require('../constants');
+
 
 passport.use('user-local',new LocalStrategy(User.authenticate()));
 passport.use('admin-local',new LocalStrategy(Admin.authenticate()));

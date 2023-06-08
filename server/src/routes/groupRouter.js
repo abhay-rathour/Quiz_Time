@@ -6,8 +6,6 @@ const Groups= require('../models/group');
 const Users= require('../models/user');
 const Admins= require('../models/admin');
 const Tests= require('../models/test');
-
-const constants=require('./../../constants');
 const connect = mongoose.connect(process.env.mongoURL,{ useNewUrlParser: true,useUnifiedTopology: true  });
 const groupRouter=express.Router();
 const authenticate=require('../authenticate');

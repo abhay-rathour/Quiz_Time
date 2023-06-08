@@ -5,7 +5,7 @@ var passport = require('passport');
 const Users= require('../models/user');
 const Admins= require('../models/admin');
 
-const constants=require('./../../constants');
+
 const connect = mongoose.connect(process.env.mongoURL);
 const registerRouter=express.Router();
 var router = express.Router();

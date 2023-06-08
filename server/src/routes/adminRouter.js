@@ -9,7 +9,6 @@ const {Parser} = require('json2csv')
 // 6099fd4dd3f09b0015cb002b
 const Tests= require('../models/test');
 
-const constants=require('./../../constants');
 const connect = mongoose.connect(process.env.mongoURL,{ useNewUrlParser: true,useUnifiedTopology: true  });
 const adminRouter=express.Router();
 const authenticate=require('../authenticate');
