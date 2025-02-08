@@ -6,7 +6,7 @@ const Users= require('../models/user');
 const Admins= require('../models/admin');
 
 
-const connect = mongoose.connect(process.env.mongoURL);
+const connect = mongoose.connect(process.env.MONGO_URI);
 const registerRouter=express.Router();
 var router = express.Router();
 

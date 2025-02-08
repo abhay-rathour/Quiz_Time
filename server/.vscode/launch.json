@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Attach to Node.js (DevContainer)",
+        "type": "node",
+        "request": "attach",
+        "restart": true,
+        "port": 9229,
+        "localRoot": "${workspaceFolder}",
+        "remoteRoot": "/workspace",
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }
+  

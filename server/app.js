@@ -39,7 +39,7 @@ app.use('/createtest', createTestRouter);        //Router to handle request rela
 app.use('/forgotPassword', forgotPassword);
 app.get('/', (req, res) => {
 
-  res.send('Hello from Quiz-time server !!!')
+  res.send('Hello Abhay from Quiz-time server !!!')
 })
 
 // app.post('/login/user',passport.authenticate('user-local',{session:false}) ,(req,res)=>{

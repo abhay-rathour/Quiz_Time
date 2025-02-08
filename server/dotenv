@@ -1,0 +1,5 @@
+PORT=4000
+SECRET_KEY='12345-67890-09876-54321'
+MONGO_URI='mongodb://localhost:27017/devdb'
+DB_NAME='devdb'
+

@@ -14,12 +14,12 @@ passport.use('admin-local',new LocalStrategy(Admin.authenticate()));
 // passport.deserializeUser(User.deserializeUser());
 
 exports.getToken=function(user){
-    return jwt.sign(user,process.env.secretKey,{expiresIn: 10800});
+    return jwt.sign(user,process.env.SECRET_KEY,{expiresIn: 10800});
 };
 
 var opts= {};
 opts.jwtFromRequest=ExtractJwt.fromAuthHeaderAsBearerToken();
-opts.secretOrKey=process.env.secretKey;
+opts.secretOrKey=process.env.SECRET_KEY;
 
 exports.jwtPassport = passport.use('jwt-user',new JwtStrategy(opts,
     (jwt_payload, done) => {

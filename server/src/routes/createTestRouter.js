@@ -13,7 +13,7 @@ const Tests= require('../models/test');
 const authenticate=require('../authenticate');
 
 const { group } = require('console');
-const connect = mongoose.connect(process.env.mongoURL);
+const connect = mongoose.connect(process.env.MONGO_URI);
 const createTestRouter=express.Router();
 
 // createTestRouter.use(bodyParser.json());

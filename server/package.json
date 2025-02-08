@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "app": "nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "engines" : { 
     "node" : "18.16.0"

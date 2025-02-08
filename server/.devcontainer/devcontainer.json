@@ -1,0 +1,19 @@
+{
+    "name": "Node.js & MongoDB DevContainer",
+
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "node",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ms-azuretools.vscode-docker",
+                "mongodb.mongodb-vscode"
+            ]
+        }
+    },
+    "postCreateCommand": "npm install",
+    "remoteUser": "root"
+}

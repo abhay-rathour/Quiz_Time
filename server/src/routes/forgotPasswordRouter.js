@@ -11,7 +11,7 @@ const Admins= require('../models/admin');
 const Tests= require('../models/test');
 
 
-const connect = mongoose.connect(process.env.mongoURL,{ useNewUrlParser: true,useUnifiedTopology: true  });
+const connect = mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true,useUnifiedTopology: true  });
 const forgotPassword=express.Router();
 const authenticate=require('../authenticate');
 const admin = require('../models/admin');
