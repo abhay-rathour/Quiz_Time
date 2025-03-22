@@ -1,26 +1,27 @@
 import { Schema, model } from "mongoose";
 
-const groupSchema = new Schema(
+const attachmentSchema = new Schema(
   {
     name: {
       type: String,
       required: true,
     },
 
+    url: {
+      type: String,
+      required: true,
+    },
+
+    size: {
+      type: Number,
+      required: true,
+    },
     type: {
       type: String,
       required: true,
-      enum: ["open", "closed", "private"],
     },
 
-    owner: {
-      type: Schema.Types.ObjectId,
-      ref: "User", // Reference to the User model
-      required: true,
-      index: true,
-    },
-
-    createdAt: {
+    upload_date: {
       type: Date,
       default: Date.now,
     },
@@ -31,4 +32,4 @@ const groupSchema = new Schema(
 );
 
 // Create the Group model
-export const Group = model("Group", groupSchema);
+export const Attachment = model("Attachment", attachmentSchema);
