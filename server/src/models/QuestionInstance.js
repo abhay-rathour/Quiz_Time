@@ -1,49 +1,53 @@
-import { Schema, model } from "mongoose";
-import { responseOptionInstanceSchema } from "./ResponseOptionInstance.js";
-  
+import { Schema, model } from 'mongoose';
+import { responseOptionInstanceSchema } from './ResponseOptionInstance.js';
+
 const questionInstanceSchema = new Schema({
     marks: {
         type: Number,
-        required: true
+        required: true,
     },
     answered: {
         type: Boolean,
-        required: true
+        required: true,
     },
     selected_choices: {
-        type: String
+        type: String,
     },
     text_response: {
-        type: String
+        type: String,
     },
     number_response: {
-        type: Number
+        type: Number,
     },
     bool_response: {
-        type: Boolean
+        type: Boolean,
     },
     test_instance: {
-        type: Schema.Types.ObjectId, 
-        ref: "TestInstance",
-        required: true
+        type: Schema.Types.ObjectId,
+        ref: 'TestInstance',
+        required: true,
     },
-    question:{
-        type: Schema.Types.ObjectId, 
-        ref: "Question",
-        required: true
+    question: {
+        type: Schema.Types.ObjectId,
+        ref: 'Question',
+        required: true,
     },
-    section_index:{
+    section_index: {
         type: Number,
-        required:true
+        required: true,
     },
-    attachments:[{
-        type: Schema.Types.ObjectId, 
-        ref: "Attachment",
-        required: true
-    }],
+    attachments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Attachment',
+            required: true,
+        },
+    ],
 
     response_option_instances: [responseOptionInstanceSchema], // Embedded Response Option Instances
-  });
-  
-export const QuestionInstance = model("QuestionInstance", questionInstanceSchema);
-  
+});
+
+export const QuestionInstance = model(
+    'QuestionInstance',
+    questionInstanceSchema
+);

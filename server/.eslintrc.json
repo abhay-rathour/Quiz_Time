@@ -1,0 +1,44 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base", // Airbnb style guide for better coding standards
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "off", // Allow console logs (useful for debugging)
+    "no-underscore-dangle": "off", // Allow _id from MongoDB
+    "import/prefer-default-export": "off", // Disable forced default exports
+    "no-param-reassign": ["error", { "props": false }], // Prevent modifying function params
+    "consistent-return": "off", // Warn instead of error for missing return
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }], // Ignore unused variables with _
+    "node/no-unpublished-import": "off", // Avoid false positives on ESM imports
+    "node/no-missing-import": "off", // Prevent import errors in ESM
+    "camelcase": [
+      "error",
+      {
+        "properties": "never", // Allows snake_case in object properties
+        "ignoreDestructuring": true, // Ignores destructured variables
+        "allow": ["_id", "user_name", "first_name", "last_name"] // Allows specific snake_case names
+      }
+    ],
+    "prettier/prettier": ["error", { "tabWidth": 4 }],
+    "indent": ["error", 4],
+    "no-mixed-spaces-and-tabs": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always", // Enforce .js extension for imports
+        "json": "always"
+      }
+    ]
+  }
+}

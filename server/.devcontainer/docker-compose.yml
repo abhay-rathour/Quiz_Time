@@ -11,7 +11,7 @@ services:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/devdb
-      - SECRET_KEY=12345-67890-09876-54321
+      - JWT_SECRET_KEY=12345-67890-09876-54321
       - PORT=4000
     volumes:
       - C:/Dev/Quiz_Time/server/:/workspace
