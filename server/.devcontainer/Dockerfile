@@ -13,7 +13,7 @@ RUN npm install --save-dev
 
 
 # Expose ports for API and debugging
-EXPOSE 3000 9229
+EXPOSE 4000 9229
 
 # Default command to start the app
 CMD ["npm", "run", "dev"]

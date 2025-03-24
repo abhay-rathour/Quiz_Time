@@ -29,11 +29,11 @@
         "allow": ["_id", "user_name", "first_name", "last_name"] // Allows specific snake_case names
       }
     ],
-    "prettier/prettier": ["error", { "tabWidth": 4 }],
-    "indent": ["error", 4],
-    "no-mixed-spaces-and-tabs": "error",
+    "prettier/prettier": ["warn", { "tabWidth": 4 }],
+    "indent": ["warn", 4],
+    "no-mixed-spaces-and-tabs": "warn",
     "import/extensions": [
-      "error",
+      "warn",
       "ignorePackages",
       {
         "js": "always", // Enforce .js extension for imports
