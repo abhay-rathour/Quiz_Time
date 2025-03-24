@@ -1,0 +1,15 @@
+version: '3'
+services:
+  react:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "3000:3000"
+      - "9228:9228" # Debugging
+    environment:
+      - SERVER_URI=http://localhost:4000/
+      - PORT=3000
+    volumes:
+      - C:/Dev/Quiz_Time/client/:/workspace
+      - /workspace/node_modules

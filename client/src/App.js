@@ -1,22 +1,7 @@
-import React from 'react';
-import './App.css';
-import {BrowserRouter} from 'react-router-dom';
-import Main from './Component/MainComponent';
+import React from "react";
 
-import {Provider} from 'react-redux';
-import { ConfigureStore } from './redux/configureStore';
-
-const store =ConfigureStore();
-function App() {
-return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <div className="App">
-            <Main/>     
-          </div>
-        </BrowserRouter>
-      </Provider>
-    );
-}
+const App = () => {
+  return <h1>Hello, React with ESM!</h1>;
+};
 
 export default App;
